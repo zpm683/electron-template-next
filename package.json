@@ -1,0 +1,94 @@
+{
+  "name": "electron-template-next",
+  "version": "1.0.0",
+  "author": "zpm683",
+  "description": "a modern electron template",
+  "main": "dist-electron/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
+    "test": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "e2e": "npx playwright test",
+    "remove-dependencies": "rimraf node_modules"
+  },
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
+    }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix src"
+    ],
+    "**/*.{js,jsx,tsx,ts,css,less,scss,sass,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/icons-material": "5.11.0",
+    "@mui/material": "5.11.7",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "14.4.3",
+    "@types/node": "18.11.18",
+    "@types/qs": "6.9.7",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@types/react-router-dom": "5.3.3",
+    "@types/testing-library__jest-dom": "5.14.5",
+    "@typescript-eslint/eslint-plugin": "5.49.0",
+    "@typescript-eslint/parser": "5.49.0",
+    "@vitejs/plugin-react": "3.0.1",
+    "@vitest/coverage-c8": "0.28.3",
+    "@vitest/ui": "0.28.3",
+    "ahooks": "3.7.4",
+    "axios": "1.2.5",
+    "dayjs": "1.11.7",
+    "electron": "22.2.0",
+    "electron-builder": "23.6.0",
+    "eslint": "8.32.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "happy-dom": "8.1.5",
+    "husky": "8.0.3",
+    "identity-obj-proxy": "3.0.0",
+    "immer": "9.0.19",
+    "lint-staged": "13.1.0",
+    "picocolors": "1.0.0",
+    "prettier": "2.8.3",
+    "qs": "6.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "6.8.0",
+    "react-router-dom": "6.8.0",
+    "rollup-plugin-visualizer": "5.9.0",
+    "sass": "1.57.1",
+    "typescript": "4.9.4",
+    "typescript-plugin-css-modules": "4.1.1",
+    "vite": "4.0.4",
+    "vite-electron-plugin": "0.7.4",
+    "vite-plugin-electron-renderer": "0.11.4",
+    "vite-plugin-eslint": "1.8.1",
+    "vite-plugin-progress": "0.0.6",
+    "vite-tsconfig-paths": "4.0.5",
+    "vitest": "0.28.3",
+    "zustand": "4.3.2"
+  }
+}
