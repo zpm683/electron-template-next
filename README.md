@@ -63,6 +63,13 @@
 ├─README.md
 ├─tsconfig.json
 ├─vite.config.ts
+├─electron
+    ├─ipc_main
+    ├─preloads
+    ├─windows
+    ├─electron-env.d.ts
+    ├─env.ts
+    └─index.ts
 └─src
     ├─app
     | ├─@types
