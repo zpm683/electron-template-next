@@ -1,0 +1,81 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./tsconfig.node.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "jsxPragma": null //jsx-runtime
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "settings": {
+    "react": {
+      "version": "detect" //jsx-runtime
+    },
+    // https://stackoverflow.com/questions/41769880/how-to-manually-add-a-path-to-be-resolved-in-eslintrc
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["./src"]
+      }
+    }
+  },
+  "rules": {
+    // http://eslint.org/docs/rules/
+    "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "no-restricted-syntax": 0,
+    "no-irregular-whitespace": 1,
+    "default-case": 0,
+    "no-promise-executor-return": 0,
+    "no-nested-ternary": 0,
+    "no-underscore-dangle": 0,
+    "arrow-body-style": 0,
+    "object-shorthand": 0,
+    "no-shadow": 0,
+
+    // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
+    "react/react-in-jsx-scope": 0, //jsx-runtime
+    "react/jsx-uses-react": 0, //jsx-runtime
+    "react/prop-types": 0,
+    "react/no-children-prop": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 1,
+    "react/jsx-filename-extension": [2, { "extensions": [".jsx", ".tsx"] }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+
+    // https://typescript-eslint.io/rules/ban-types/
+    "@typescript-eslint/ban-types": [2, { "types": { "{}": false } }],
+    "@typescript-eslint/no-unused-vars": [1],
+
+    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+
+    //https://github.com/prettier/eslint-plugin-prettier
+    "prettier/prettier": "error"
+  }
+}
