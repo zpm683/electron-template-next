@@ -11,7 +11,8 @@
     "test": "vitest --ui",
     "coverage": "vitest run --coverage",
     "e2e": "npx playwright test",
-    "remove-dependencies": "rimraf node_modules"
+    "remove-dependencies": "rimraf node_modules",
+    "postinstall": "electron-builder install-app-deps"
   },
   "debug": {
     "env": {
