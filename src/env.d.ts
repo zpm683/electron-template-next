@@ -2,6 +2,14 @@
 /// <reference types="react-dom" />
 /// <reference types="vite/client" />
 
+interface IElectronAPI {
+  //TODO add electronAPI
+}
+
+interface Window {
+  electronAPI: IElectronAPI;
+}
+
 declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: "development" | "production" | "test";
