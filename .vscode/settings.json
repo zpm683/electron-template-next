@@ -3,8 +3,8 @@
   "editor.renderWhitespace": "trailing",
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "workbench.colorCustomizations": {
     "editorWhitespace.foreground": "#fbff00"
