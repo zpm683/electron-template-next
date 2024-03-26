@@ -90,5 +90,10 @@
     "vite-tsconfig-paths": "4.0.5",
     "vitest": "0.28.3",
     "zustand": "4.3.2"
+  },
+  "dependencies": {
+    "crypto-js": "4.1.1",
+    "iconv-lite": "0.6.3",
+    "log4js": "6.9.1"
   }
 }
