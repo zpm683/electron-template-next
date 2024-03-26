@@ -3,6 +3,7 @@ import { release } from "node:os";
 import { createMainWin } from "./windows/createMainWin";
 import "./env";
 import "./ipc_main";
+import "./tools/logger";
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith("6.1")) app.disableHardwareAcceleration();
