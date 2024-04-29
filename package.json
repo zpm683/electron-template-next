@@ -93,6 +93,7 @@
   },
   "dependencies": {
     "crypto-js": "4.1.1",
+    "electron-store": "8.2.0",
     "iconv-lite": "0.6.3",
     "log4js": "6.9.1"
   }
